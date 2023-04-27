@@ -3,6 +3,42 @@
     padding: 0;
     margin: 0;
 }
+@keyframes ani{
+    from{
+        transform: translateX(200px);
+        transition: .5s;
+        opacity: 10%;
+    }
+    to{
+        transform: translateX(0px);
+        transition: .5s;
+        opacity: 100%;
+    }
+}
+@keyframes anib{
+    from{
+        transform: translateX(-200px);
+        transition: 1s;
+        opacity: 10%;
+    }
+    to{
+        transform: translateX(0px);
+        transition: 1s;
+        opacity: 100%;
+    }
+}
+@keyframes anic{
+    from{
+        transform: translateY(200px);
+        transition: .5s;
+        opacity: 10%;
+    }
+    to{
+        transform: translateY(0px);
+        transition: .5s;
+        opacity: 100%;
+    }
+}
 
 :root{
     --main-green: #156742;
@@ -20,6 +56,7 @@ body{
     background-color: var(--main-green);
     height: 15vh;
     z-index: 2;
+    width: 100%;
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: 0px 10vh 0px 10vh;
@@ -49,6 +86,8 @@ body{
     justify-content: space-between;
     align-items: start;
     flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
     padding: 0px 10vh 0px 10vh;
 }
 .navbar-slider{
@@ -98,4 +137,90 @@ body{
 .spacer{
     position: relative;
     height: 100vh;
+}
+.title{
+    font-size: 6vh;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    color: white;
+    text-align: center;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif;
+}
+.title-opacity-scrolling{
+    opacity: 15%;
+    transition: 1s;
+}
+.card-in-video{
+    position: relative;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif;
+    display: flex;
+    top: 10vh;
+    align-items: start;
+    justify-content: space-between;
+    padding: 2vh;
+}
+.card-in-video h2{
+    color: #156742;
+    font-size: 6vh;
+}
+.card-in-video-h2-animation{
+    animation-name: anib;
+    animation-duration: 2s;
+}
+.card-in-video-p-animation{
+    color: white;
+    font-size: 4vh;
+    animation-name: ani;
+    animation-duration: 2s;
+}
+.card-in-video p{
+    position: relative;
+    color: white;
+    font-size: 4vh;
+    width: 80vh;
+}
+.first-page-video-scroll-animation{
+    opacity: 10%;
+    transition: 2s;
+}
+.main-part{
+    width: 100%;
+    position: relative;
+    top: 25vh;
+    background-color: black;
+    height: 300vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.main-part-img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    top: 30vh;
+}
+.main-part-img-scroll-animation{
+    position: sticky;
+    top: 10vh;
+    animation-name: anic;
+    animation-duration: 1s;
+}
+.main-part-text{
+    position: relative;
+    display: flex;
+    color: white;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif;
+    font-size: large;
+    text-align: center;
+    justify-content: flex-end;
+    top: 50vh;
+    z-index: 2;
+    align-items: center;
+}
+.main-part-text-scroll-animated{
+    position: sticky;
+    padding-left: 40vh;
 }
