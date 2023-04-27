@@ -100,9 +100,7 @@ window.addEventListener("scroll", (event) => {
     if(visible(mainPartImg)){
         mainPartImg.classList.add('main-part-img-scroll-animation');
         mainPartImgVideoMaker(scroll);
-        console.log(ratio);
-        console.log(scroll);
-        mainPartText.classList.add('main-part-text-scroll-animated');
+        // mainPartText.classList.add('main-part-text-scroll-animated');
             // if(scroll >= 2100 && scroll >= 2300){
             //     document.getElementById('main-part-img').src = 'images/mainPageRolexVideo/' + 2 + '.png'
             // }
